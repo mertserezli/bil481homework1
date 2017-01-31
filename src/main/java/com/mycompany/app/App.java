@@ -3,11 +3,12 @@ package com.mycompany.app;
 import java.util.ArrayList;
 import static spark.Spark.*;
 import java.util.HashMap;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import spark.ModelAndView;
 import spark.template.mustache.MustacheTemplateEngine;
+import java.util.Arrays;
+
 
 public class App
 {
@@ -97,7 +98,7 @@ public class App
         	arr[i] = inputList.get(i).intValue();
     	}
 
-		int[] result = App.doMergeSort(arr, input2AsInt, input3AsInt);
+		String result=Arrays.toString( App.doMergeSort(arr, input2AsInt, input3AsInt));
 
 		Map map = new HashMap();
 		map.put("result", result);
