@@ -41,27 +41,27 @@ public class AppTest
 	{
 		int[] array={5,4,3,2,1};
 		int[] result={1,2,3,4,5};
-		assertTrue(Arrays.equals( result, new App().doMergeSort(array,0,array.length-1)));
+		assertTrue(Arrays.equals( result, App.doMergeSort(array,0,array.length-1)));
 	}
 	public void testNull()
 	{
-		assertTrue(null==new App().doMergeSort(null,0,15));
+		assertTrue(null==App.doMergeSort(null,0,15));
 	}
 	public void testEmpty()
 	{
-		assertTrue(null==new App().doMergeSort(null,0,15));
+		assertTrue(null==App.doMergeSort(null,0,15));
 	}
 	public void testSameIndex()
 	{
 		int[] array={5,4,3,2,1,0};
 		int[] expected={5,4,3,2,1,0};
-		assertTrue(Arrays.equals(expected, new App().doMergeSort(array,2,2)));
+		assertTrue(Arrays.equals(expected, App.doMergeSort(array,2,2)));
 	}
 	public void testLowerRight()
 	{
 		int[] array={5,4,3,2,1,0};
 		int[] expected={5,4,3,2,1,0};
-		assertTrue(null==new App().doMergeSort(array,5,2));
+		assertTrue(null==App.doMergeSort(array,5,2));
 	}
 	
 }
